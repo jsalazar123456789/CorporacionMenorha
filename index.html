@@ -28,9 +28,10 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
                 <div class="social-media-icons">
-                    <a href="https://www.facebook.com/menorhagt/?locale=es_LA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/50279484797" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
                 <div class="hamburger">
                     <span></span>
@@ -626,7 +627,7 @@
                 <div class="footer-section">
                     <h4>Síguenos</h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/menorhagt/?locale=es_LA"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
@@ -648,7 +649,7 @@
         <div class="modal-content">
             <span class="modal-close">&times;</span>
             <h3>Formulario de Requerimiento de Servicios</h3>
-            <form id="service-request-form" class="service-form" action="https://formspree.io/f/mblkqpvo" method="POST" target="_blank">
+            <form id="service-request-form" class="service-form" action="https://getform.io/f/aolzgppb" method="POST" enctype="multipart/form-data" target="_blank">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="request-number">Número de Requerimiento</label>
@@ -658,7 +659,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="requester-name">Nombre Completo</label>
-                        <input type="text" id="requester-name" name="Nombre" required>
+                        <input type="text" id="requester-name" name="nombre-completo" required>
                     </div>
                     <div class="form-group">
                         <label for="requester-company">Empresa (Opcional)</label>
@@ -679,7 +680,7 @@
                     <label for="service-type">Tipo de Servicio</label>
                     <select id="service-type" name="Tipo de Servicio" required>
                         <option value="">Seleccione un servicio...</option>
-                        <option value="transporte">Transporte Terrestre</option>
+                        <option value="transporte-terrestre">Transporte Terrestre</option>
                         <option value="almacenamiento">Almacenamiento</option>
                         <option value="distribucion">Distribución</option>
                         <option value="express">Entrega Express</option>
@@ -703,6 +704,14 @@
                 <div class="form-group">
                     <label for="additional-comments">Comentarios Adicionales</label>
                     <textarea id="additional-comments" name="Comentarios Adicionales" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="file-upload">Adjuntar Archivo (Excel o PDF)</label>
+                    <input type="file" id="file-upload" name="attachment" accept=".xls,.xlsx,.pdf">
+                </div>
+                <!-- Honeypot input -->
+                <div class="form-group">
+                    <input type="hidden" name="_gotcha" style="display:none !important">
                 </div>
                 <button type="submit" class="cta-button">Enviar Requerimiento</button>
             </form>
@@ -739,12 +748,12 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="requester-name">Email</label>
-                        <input type="email" id="requester-email" name="Email" required>
+                        <label for="quote-requester-email">Email</label>
+                        <input type="email" id="quote-requester-email" name="Email" required>
                     </div>
                     <div class="form-group">
-                        <label for="requester-company">Telefono</label>
-                        <input type="tel" id="requester-phone" name="Teléfono" required>
+                        <label for="quote-requester-phone">Teléfono</label>
+                        <input type="tel" id="quote-requester-phone" name="Teléfono" required>
                     </div>
                 </div>
                 <div class="form-group">

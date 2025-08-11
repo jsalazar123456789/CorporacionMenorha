@@ -500,23 +500,23 @@ if (quoteForm) {
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('.lightbox-close');
+const mainWorkImageContainer = document.querySelector('.work-main-display .work-image-container');
 
-if (lightbox) {
-    workSlides.forEach(slide => {
-        const img = slide.querySelector('img');
-        img.addEventListener('click', (e) => {
-            // Only open lightbox if the slide is active
-            if (slide.classList.contains('active')) {
-                e.stopPropagation(); // Prevent carousel click event
-                lightbox.style.display = 'flex';
-                lightboxImg.src = img.src;
-            }
+if (lightbox && mainWorkImageContainer) {
+    mainWorkImageContainer.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const imgSrc = mainWorkImageContainer.querySelector('img').src;
+        if (imgSrc) {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = imgSrc;
+        }
+    });
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
         });
-    });
-
-    lightboxClose.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
+    }
 
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {

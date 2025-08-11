@@ -120,6 +120,10 @@ body {
     transform: scale(1.1);
 }
 
+.social-media-icons .fa-whatsapp:hover {
+    color: #25D366;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -1564,6 +1568,7 @@ body {
 .social-links a:hover {
     color: #4dd0e1;
     filter: drop-shadow(0 0 8px rgba(77, 208, 225, 0.7));
+    transform: scale(1.1);
 }
 
 .footer-bottom {
@@ -1692,6 +1697,19 @@ body {
     outline: none;
     border-color: #4dd0e1;
     box-shadow: 0 0 8px rgba(77, 208, 225, 0.5);
+}
+
+.form-group input[type="file"] {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+    border-color: #4dd0e1;
+    background: #f1f1f1;
 }
 
 .service-form .cta-button,
